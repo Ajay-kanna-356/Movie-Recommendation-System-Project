@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .movie-box {
+            width: 300px;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            text-align: left;
+        }
+        .movie-title {
+            font-size: 1.5em;
+            color: #333;
+            margin: 0;
+        }
+        .movie-genre, .movie-rating, .movie-director {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #666;
+        }
+        .movie-rating {
+            font-weight: bold;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Movie Recommendations</h1>
+    
+    {% for movie in movies %}
+    <div class="movie-box">
+        <h2 class="movie-title">{{ movie[0] }}</h2>
+        <p class="movie-genre">Genre: {{ movie[1] }}</p>
+        <p class="movie-rating">Rating: {{ movie[2] }}</p>
+        <p class="movie-director">Director: {{ movie[3] }}</p>
+    </div>
+    {% endfor %}
+
+</body>
+</html>
