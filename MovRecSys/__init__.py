@@ -11,7 +11,6 @@ def moviepage():
     d_name = request.form.get('dname')
     rating = request.form.get('rating')
     genre = request.form.get('genre')
-    movies = []
     with open("MovRecSys/movies.json","r") as f:
         movies = json.load(f)
     filtered_movies = apply_filters(movies,genre=genre,rating=rating,director_name=d_name)
