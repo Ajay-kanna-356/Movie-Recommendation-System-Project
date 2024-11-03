@@ -39,7 +39,7 @@ class FilterDecorator(FilterStrategy):
         return self._strategy.filter(filtered_movies)
 
 # Function to apply filters dynamically with layering
-def apply_filters(movies: List[List], genre: Optional[str] = None, 
+def apply_filters_facade(movies: List[List], genre: Optional[str] = None, 
                   rating: Optional[float] = None, 
                   director_name: Optional[str] = None) -> List[List]:
     
