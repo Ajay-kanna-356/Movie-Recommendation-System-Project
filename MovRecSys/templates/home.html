@@ -44,17 +44,19 @@
         button {
             margin-top: 20px;
             padding: 10px;
-            background-color: rgba(51, 51, 51, 0.8); /* Slight transparency */
+            background-color:purple; /* Slight transparency */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: rgba(85, 85, 85, 0.8);
-        }
+        
         .results {
             margin-top: 20px;
+        }
+        h1{
+            color:indigo;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -83,12 +85,20 @@
         <label for="director">Director Name:</label>
         <input type="text" id="director" placeholder="Enter director's name" style="padding: 10px;" name="dname">
 
-        <button type="submit">Get Recommendations</button>
+        <button type="submit" onmouseover="changecolor(event)" onmouseout="resetcolor(event)">Get Recommendations</button>
     </form>
 
     <div class="results" id="results"></div>
 </div>
+<script>
+    function changecolor(event){
+        event.target.style.backgroundColor="plum";
+    }
+    function resetcolor(event){
+        event.target.style.backgroundColor ="purple";
+    }
 
+</script>
 </body>
 </html>
 
