@@ -44,7 +44,7 @@
         button {
             margin-top: 20px;
             padding: 10px;
-            background-color:purple; /* Slight transparency */
+            background-color:darkturquoise; /* Slight transparency */
             color: white;
             border: none;
             border-radius: 5px;
@@ -55,14 +55,17 @@
             margin-top: 20px;
         }
         h1{
-            color:indigo;
+            color:black;
             font-weight: 700;
+        }
+        .highlight{
+            background-color: #f3f0f09e;
         }
     </style>
 </head>
 <body style="background-image: url('{{ url_for('static', filename='image.png') }}'); background-size: cover;">
 <header>
-    <h1>Movie Recommendation System</h1>
+    <h1> <span class="highlight">Movie Recommendation System</h1>
 </header>
 
 <div class="container">
@@ -92,10 +95,10 @@
 </div>
 <script>
     function changecolor(event){
-        event.target.style.backgroundColor="plum";
+        event.target.style.backgroundColor="cyan";
     }
     function resetcolor(event){
-        event.target.style.backgroundColor ="purple";
+        event.target.style.backgroundColor ="darkturquoise";
     }
 
 </script>
