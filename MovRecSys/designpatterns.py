@@ -11,7 +11,7 @@ class GenreFilter(FilterStrategy):
         self.genre = genre
 
     def filter(self, movies: List[List]) -> List[List]:
-        return [movie for movie in movies if movie[1] == self.genre]
+        return [movie for movie in movies if self.genre in movie[1]]
 
 class RatingFilter(FilterStrategy):
     def __init__(self, rating: float):

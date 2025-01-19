@@ -59,11 +59,11 @@
             font-weight: 700;
         }
         .highlight{
-            background-color: #f3f0f09e;
+            background-color: #f0f3f39e;
         }
     </style>
 </head>
-<body style="background-image: url('{{ url_for('static', filename='image.png') }}'); background-size: cover;">
+<body style="background-image: url('{{ url_for('static', filename='image.png') }}');">
 <header>
     <h1> <span class="highlight">Movie Recommendation System</h1>
 </header>
@@ -95,7 +95,7 @@
 </div>
 <script>
     function changecolor(event){
-        event.target.style.backgroundColor="cyan";
+        event.target.style.backgroundColor="hsla(187, 84%, 60%, 0.62)";
     }
     function resetcolor(event){
         event.target.style.backgroundColor ="darkturquoise";
